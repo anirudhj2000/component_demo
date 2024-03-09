@@ -16,6 +16,10 @@ let paths = [
     title: "Sticky scroll (Vertical + Horizaontal)",
     path: "stickyscrolldual",
   },
+  {
+    title: "Parallax Pricing Component",
+    path: "parallaxpricing",
+  },
 ];
 
 export default function Home() {
