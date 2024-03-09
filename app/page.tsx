@@ -8,6 +8,10 @@ let paths = [
     title: "Rotating Text",
     path: "rotatingtextdemo",
   },
+  {
+    title: "Hover Grid Bg",
+    path: "hovergridbg",
+  },
 ];
 
 export default function Home() {
