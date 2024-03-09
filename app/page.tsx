@@ -12,6 +12,10 @@ let paths = [
     title: "Hover Grid Bg",
     path: "hovergridbg",
   },
+  {
+    title: "Sticky scroll (Vertical + Horizaontal)",
+    path: "stickyscrolldual",
+  },
 ];
 
 export default function Home() {
