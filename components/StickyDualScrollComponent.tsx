@@ -53,18 +53,23 @@ const StickScrollDualComponent = () => {
           return index;
         }
         return acc;
-      }
+      },
+      0
     );
     setActiveCard(closestBreakpointIndex);
   });
+
+  useEffect(() => {
+    console.log("active card", activeCard);
+  }, [activeCard]);
 
   return (
     <section
       ref={targetRef}
       className="relative h-[300vh] w-[100vw] bg-black flex flex-row justify-center"
     >
-      <div className="absolute h-full bg-black [mask-image:radial-gradient(ellipse_30%_30%_at_50%_40%,#000_60%,transparent_100%)]"></div>
-      <div className="absolute flex flex-col w-[100vw] top-0 h-36 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#5581d466] via-[#5581d413] to-[#5581d400]"></div>
+      <div className="absolute h-full bg-black [mask-image:radial-gradient(ellipse_30%_30%_at_50%_40%,#000_60%,transparent_100%)]" />
+      <div className="absolute flex flex-col w-[100vw] top-0 h-36 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#5581d466] via-[#5581d413] to-[#5581d400]" />
       <div className="sticky top-0 flex flex-row justify-center h-screen items-center overflow-hidden z-100 w-[60vw] [mask-image:radial-gradient(ellipse_80%_40%_at_50%_50%,#000_60%,transparent_100%)]">
         <motion.div
           style={{ y: y }}
@@ -84,7 +89,7 @@ const StickScrollDualComponent = () => {
         </motion.div>
       </div>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden w-[40vw]">
-        <motion.div style={{ x }} className="flex gap-x-[100px]">
+        <motion.div style={{ x: x }} className="flex gap-x-[100px]">
           {cards.reverse().map((card, index) => {
             return (
               <ImageCard

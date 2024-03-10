@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-interface AboutCardInterface {
+interface DemoCardInterface {
   index: number;
   opacity: number;
   title: string;
@@ -13,7 +13,7 @@ const DemoCard = ({
   opacity,
   title,
   description,
-}: AboutCardInterface) => {
+}: DemoCardInterface) => {
   return (
     <div
       key={index}
